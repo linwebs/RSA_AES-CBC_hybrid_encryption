@@ -74,8 +74,8 @@ public class Decryption {
 					continue;
 				}
 			} else if (status.equals("2")) {
-				genrate_rsa_key();
-				finish_genrate_rsa_key();
+				generate_rsa_key();
+				finish_generate_rsa_key();
 			} else if (status.equals("3")) {
 				close_program();
 			}
@@ -253,7 +253,7 @@ public class Decryption {
 		return true;
 	}
 
-	private static boolean finish_genrate_rsa_key() {
+	private static boolean finish_generate_rsa_key() {
 		String status = "";
 		while (!status.equals("1")) {
 			System.out.println("|+++++++++++++++++++++++++++++++++++++++++++++++++++++++|");
@@ -270,7 +270,7 @@ public class Decryption {
 		return false;
 	}
 
-	private static void genrate_rsa_key() throws NoSuchAlgorithmException, IOException {
+	private static void generate_rsa_key() throws NoSuchAlgorithmException, IOException {
 		// generate RSA key pair
 		KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
 		kpg.initialize(2048);

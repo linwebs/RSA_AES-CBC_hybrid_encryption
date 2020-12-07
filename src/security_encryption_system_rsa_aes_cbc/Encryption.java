@@ -54,7 +54,7 @@ public class Encryption {
 					close_program();
 				}
 				// step 2: generate AES key
-				genrate_aes_key();
+				generate_aes_key();
 				// step 3: input data
 				if (!input_data_msg()) {
 					status = "";
@@ -251,7 +251,7 @@ public class Encryption {
 	/*
 	 * step 2: generate AES key
 	 */
-	private static void genrate_aes_key() throws Exception {
+	private static void generate_aes_key() throws Exception {
 		KeyGenerator keyGen = KeyGenerator.getInstance("AES");
 		keyGen.init(256);
 		SecretKey key = keyGen.generateKey();

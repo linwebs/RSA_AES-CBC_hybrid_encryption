@@ -1,7 +1,6 @@
 # 資訊安全與管理 作業 2 1.1
 RSA + AES-CBC 混合式加密系統
 https://hackmd.io/@linwebs-ncyu/Sk4EKk5ov
-
 > Linwebs 2020.12
 > NCYU Information Security and Management
 
@@ -24,7 +23,7 @@ Jave RSA + AES-CBC
 	* java.nio.file [檔案讀寫]
 	* java.security [AES]
 	* java.security.spec [AES]
-	* java.util [Base64、標準輸入]
+	* java.util [Base64 編碼解碼、標準輸入]
 	* javax.crypto [RSA]
 * Java 最低版本: Java 8 或更新版
 * Java 使用版本: Java JavaSE-14 (jdk-15.0.1)
@@ -37,7 +36,7 @@ Jave RSA + AES-CBC
 ※ 請確保擁有執行程式當層資料夾及子資料夾的讀寫權限
 ※ 請確保讀入的文字檔案編碼為 UTF-8 不帶簽名
 
-## 系統架構)
+## 系統架構
 ![encrypt_flow_graph](https://img.linwebs.tw/ewoce)
 ![decrypt_flow_graph](https://img.linwebs.tw/clekj)
 
@@ -69,8 +68,11 @@ Jave RSA + AES-CBC
 | 7. |  | 完成解密 |
 
 ## 檔案結構
-* Encryption.java [加密]
-* Decryption.java [解密、生成 RSA 金鑰]
+* README.md [說明檔]
+* src [程式碼原始檔資料夾]
+	* security_encryption_system_rsa_aes_cbc [資料夾]
+		* Encryption.java [加密]
+		* Decryption.java [解密、生成 RSA 金鑰]
 * text [資料夾]
 	* input.txt [原文純文字檔案]
 	* aes_key.txt [AES 256 金鑰加密檔]
@@ -103,7 +105,7 @@ hijklmnop
 你好嗎?
 ```
 
-* 解密後的純文字檔案 input.txt
+* 解密後的純文字檔案 output.txt
 ```
 abcdefg
 hijklmnop
@@ -137,3 +139,13 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzMyCZ08XLC9wvrmBBA9tMqG7pMGCj96YCQNJ
 ```
 
 由此執行結果可驗證**原文純文字檔案**與**解密後的純文字檔案**內容相符
+
+## 參考資料
+
+> * [Java AES CBC encryption example](https://gist.github.com/itarato/abef95871756970a9dad)
+> [name=Peter Arato (itarato)]
+> * [RSA Encryption and Decryption in Java](https://www.devglan.com/java8/rsa-encryption-decryption-java)
+> [name=Dhiraj]
+> * [How to Generate RSA Keys in Java](https://www.novixys.com/blog/how-to-generate-rsa-keys-java/)
+> [name=Peter Jay Sridhar]
+> * [stack overflow](https://stackoverflow.com/)
